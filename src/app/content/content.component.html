@@ -1,0 +1,9 @@
+<div class="intro">
+  <div class="intro-overlay"></div>
+</div>
+<div class="intro-content">
+  <h1>Felix Mohammadi Kho'i</h1>
+  <a mat-icon-button *ngFor="let channel of socialChannels; let i = index" [ngClass]="{'social-link': i > 0}" [href]="channel.link" target="_blank">
+    <i [ngClass]="channel.icon"></i>
+  </a>
+</div>
