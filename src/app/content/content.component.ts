@@ -15,10 +15,10 @@ export class ContentComponent {
 
   constructor() {
     this.socialChannels = [
-      { icon: 'fab fa-github fa-3x', link: 'https://github.com/feeloor' },
-      { icon: 'fab fa-linkedin fa-3x', link: 'https://www.linkedin.com/in/felix-mohammadi-kho-i-70383181/?ppe=1' },
-      { icon: 'fab fa-blogger-b fa-3x', link: 'https://medium.com/@felix_20074' },
-      { icon: 'fab fa-twitter fa-3x', link: 'https://twitter.com/FelixKhoi' },
+      { icon: 'fab fa-github fa-3x', link: 'http://bit.ly/github-felixkhoise' },
+      { icon: 'fab fa-linkedin fa-3x', link: 'http://bit.ly/linkedin-felixkhoise' },
+      { icon: 'fab fa-blogger-b fa-3x', link: 'http://bit.ly/medium-felixkhoise' },
+      { icon: 'fab fa-twitter fa-3x', link: 'http://bit.ly/twitter-felixkhoise' },
       { icon: 'far fa-envelope fa-3x', link: 'mailto:felix@khoi.se' }
     ];
   }
