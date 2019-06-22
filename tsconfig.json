@@ -9,9 +9,12 @@
     "moduleResolution": "node",
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
+    "incremental": true,
     "target": "es5",
     "paths": {
-      "@felixkhoi/*": ["src/app/*"]
+      "@felixkhoi/*": [
+        "src/app/*"
+      ]
     },
     "typeRoots": [
       "node_modules/@types"

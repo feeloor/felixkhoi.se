@@ -4,9 +4,6 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatCardModule } from '@angular/material/card';
-import { MatExpansionModule } from '@angular/material/expansion';
-import { MatDatepickerModule } from '@angular/material/datepicker';
-import { MatInputModule } from '@angular/material/input';
 import { MatMenuModule } from '@angular/material/menu';
 
 const MAT_MODULES = [
@@ -14,9 +11,6 @@ const MAT_MODULES = [
   MatIconModule,
   MatToolbarModule,
   MatCardModule,
-  MatExpansionModule,
-  MatDatepickerModule,
-  MatInputModule,
   MatMenuModule
 ];
 
