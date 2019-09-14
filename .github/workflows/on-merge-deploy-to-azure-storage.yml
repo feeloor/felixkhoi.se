@@ -25,4 +25,3 @@ jobs:
           AZURE_SUBSCRIPTION_ID: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
           AZURE_STORAGE_ACCOUNT_NAME: ${{ secrets.AZURE_STORAGE_ACCOUNT_NAME }}
           AZURE_INDEX_DOCUMENT_NAME: "index.html"
-          AZURE_ERROR_DOCUMENT_NAME: ""
