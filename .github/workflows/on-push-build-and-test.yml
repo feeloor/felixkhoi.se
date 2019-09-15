@@ -18,7 +18,10 @@ jobs:
       - name: yarn test
         run: yarn test --ci
       - name: Debug
-        run: echo Ref - ${github.ref}, Base Ref - ${github.base_ref}
+        run: echo Ref - ${g_ref}, Base Ref - ${g_base_ref}
+        env:
+          G_REF: ${{ github.ref }}
+          G_BASE_REF: ${{ github.base_ref }}
       - name: Deploying to Azure
         uses: feeloor/azure-static-website-deploy@master
         if: github.ref == 'master' || github.base_ref == 'master'
