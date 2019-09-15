@@ -18,10 +18,7 @@ jobs:
       - name: yarn test
         run: yarn test --ci
       - name: Debug
-        uses: monacorp/action-name@master
-        with:
-          entrypoint: /bin/echo
-          args: Ref - ${{ github.ref }}, Base Ref - ${{ github.base_ref }}
+        run: echo Ref - ${github.ref}, Base Ref - ${github.base_ref}
       - name: Deploying to Azure
         uses: feeloor/azure-static-website-deploy@master
         if: github.ref == 'master' || github.base_ref == 'master'
