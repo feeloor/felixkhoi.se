@@ -17,7 +17,7 @@ jobs:
         run: yarn build --prod
       - name: yarn test
         run: yarn test --ci
-      - name: Deploying to Azure
+      - name: Deploying to Azure - ${{ github.ref }}
         uses: feeloor/azure-static-website-deploy@master
         if: github.ref == 'master'
         env:
