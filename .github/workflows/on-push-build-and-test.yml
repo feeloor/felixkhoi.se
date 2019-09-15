@@ -17,14 +17,9 @@ jobs:
         run: yarn build --prod
       - name: yarn test
         run: yarn test --ci
-      - name: Debug
-        run: echo Ref - ${G_REF}, Base Ref - ${G_BASE_REF}
-        env:
-          G_REF: ${{ github.ref }}
-          G_BASE_REF: ${{ github.base_ref }}
       - name: Deploying to Azure
         uses: feeloor/azure-static-website-deploy@master
-        if: github.ref == 'master' || github.base_ref == 'master'
+        if: contains(github.ref, 'master') || contains(github.base_ref, 'master')
         env:
           SOURCE_DIR: "./dist/felixkhoi"
           AZURE_CLIENT_ID: ${{ secrets.AZURE_CLIENT_ID }}
