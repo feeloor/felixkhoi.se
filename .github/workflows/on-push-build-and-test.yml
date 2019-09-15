@@ -18,7 +18,7 @@ jobs:
       - name: yarn test
         run: yarn test --ci
       - name: Debug
-        run: echo Ref - ${g_ref}, Base Ref - ${g_base_ref}
+        run: echo Ref - ${G_REF}, Base Ref - ${G_BASE_REF}
         env:
           G_REF: ${{ github.ref }}
           G_BASE_REF: ${{ github.base_ref }}
