@@ -1,0 +1,19 @@
+name: "Build, Test"
+on: [push]
+
+jobs:
+  build-and-test:
+    name: Build & Test
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      - name: Use Node.js 10.x
+        uses: actions/setup-node@v1
+        with:
+          node-version: 10.x
+      - name: yarn install
+        run: yarn install
+      - name: yarn build
+        run: yarn build --prod
+      - name: yarn test
+        run: yarn test --ci
