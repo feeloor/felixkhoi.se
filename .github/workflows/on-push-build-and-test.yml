@@ -1,4 +1,4 @@
-name: "Build, Test & Deploy"
+name: "Build, Test"
 on: [push]
 
 jobs:
@@ -17,14 +17,3 @@ jobs:
         run: yarn build --prod
       - name: yarn test
         run: yarn test --ci
-      - name: Deploying to Azure
-        uses: feeloor/azure-static-website-deploy@master
-        if: contains(github.ref, 'master') || contains(github.base_ref, 'master')
-        env:
-          SOURCE_DIR: "./dist/felixkhoi"
-          AZURE_CLIENT_ID: ${{ secrets.AZURE_CLIENT_ID }}
-          AZURE_SECRET: ${{ secrets.AZURE_SECRET }}
-          AZURE_TENANT_ID: ${{ secrets.AZURE_TENANT_ID }}
-          AZURE_SUBSCRIPTION_ID: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
-          AZURE_STORAGE_ACCOUNT_NAME: ${{ secrets.AZURE_STORAGE_ACCOUNT_NAME }}
-          AZURE_INDEX_DOCUMENT_NAME: "index.html"
